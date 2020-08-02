@@ -242,6 +242,7 @@ class BaseAPI(object):
         fcm_payload['notification'] = {}
         if message_icon:
             fcm_payload['notification']['icon'] = message_icon
+            fcm_payload['notification']['image'] = message_icon
         # If body is present, use it
         if message_body:
             fcm_payload['notification']['body'] = message_body
