@@ -28,6 +28,7 @@ class FCMNotification(BaseAPI):
                              content_available=None,
                              android_channel_id=None,
                              timeout=5,
+                             message_image=None,
                              extra_notification_kwargs=None,
                              extra_kwargs={}):
         """
@@ -92,6 +93,7 @@ class FCMNotification(BaseAPI):
             message_body=message_body,
             message_title=message_title,
             message_icon=message_icon,
+            message_image=message_image,
             sound=sound,
             condition=condition,
             collapse_key=collapse_key,
