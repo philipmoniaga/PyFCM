@@ -147,6 +147,7 @@ class BaseAPI(object):
                       content_available=None,
                       remove_notification=False,
                       android_channel_id=None,
+                      message_image=None,
                       extra_notification_kwargs={},
                       **extra_kwargs):
         """
@@ -242,7 +243,8 @@ class BaseAPI(object):
         fcm_payload['notification'] = {}
         if message_icon:
             fcm_payload['notification']['icon'] = message_icon
-            fcm_payload['notification']['image'] = message_icon
+        if message_image:
+            fcm_payload['notification']['image'] = message_image
         # If body is present, use it
         if message_body:
             fcm_payload['notification']['body'] = message_body
